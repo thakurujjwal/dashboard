@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Card, CardContent } from '@material-ui/core';
-
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Card, CardContent } from '@mui/material';
+import data from './ReportsJsonData/SpeedReport.json'
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -11,14 +11,7 @@ const useStyles = makeStyles({
 const SpeedReport = () => {
   const classes = useStyles();
 
-  const data = [
-    { vehicleId: 'ABC123', date: '2023-03-26', speed: '80 km/h', location: 'Mumbai' },
-    { vehicleId: 'DEF456', date: '2023-03-26', speed: '60 km/h', location: 'Delhi' },
-    { vehicleId: 'GHI789', date: '2023-03-27', speed: '70 km/h', location: 'Bangalore' },
-    { vehicleId: 'ABC123', date: '2023-03-26', speed: '80 km/h', location: 'Mumbai' },
-    { vehicleId: 'DEF456', date: '2023-03-26', speed: '60 km/h', location: 'Delhi' },
-    { vehicleId: 'GHI789', date: '2023-03-27', speed: '70 km/h', location: 'Bangalore' }
-  ];
+
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden', marginBottom: '2rem' }}>

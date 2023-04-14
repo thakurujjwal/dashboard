@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
-import {Card} from '@material-ui/core';
-// import { theme } from './../../themes/index';
-
+import { Card } from '@mui/material';
 
 
 export default function DataGridTable() {
@@ -14,20 +12,19 @@ export default function DataGridTable() {
   });
 
   return (
-   
 
-        
-      <Card style={{ height: 500, width: '100%' }}>
-      
-      <DataGrid
-        {...data}
-        components={{
-          Toolbar: GridToolbar,
-        }}
-      />
+    <Card style={{ height: 700, width: '100%' }}>
+    
+        <DataGrid
+          {...data}
+          components={{
+            Toolbar: GridToolbar,
+          }}
+        />
+    
     </Card>
-  
-  
-   
+
+
+
   );
 }

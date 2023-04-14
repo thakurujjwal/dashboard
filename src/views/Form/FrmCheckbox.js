@@ -12,7 +12,6 @@ import {
     Grid,
     Typography,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
 import withStyles from '@mui/styles/withStyles';
 import { green } from '@mui/material/colors';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
@@ -20,9 +19,7 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import Favorite from '@mui/icons-material/Favorite';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import {Checkbox} from '@mui/material';
-import Breadcrumb from '../../component/Breadcrumb';
 
-// import Checkbox from './../../../component/Checkbox';
 import { gridSpacing } from '../../store/constant';
 
 const GreenCheckbox = withStyles({
@@ -68,17 +65,7 @@ const FrmCheckbox = (props) => {
 
     return (
         <React.Fragment>
-            <Breadcrumb title="Form Checkbox">
-                <Typography component={Link} to="/" variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Home
-                </Typography>
-                <Typography variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Forms
-                </Typography>
-                <Typography variant="subtitle2" color="primary" className="link-breadcrumb">
-                    Checkbox
-                </Typography>
-            </Breadcrumb>
+          
             <Grid container spacing={gridSpacing}>
                 <Grid item xs={12}>
                     <Card>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardContent, Typography, Divider } from '@mui/material';
+import { Grid, Card, CardContent, Divider } from '@mui/material';
 import Chart from 'react-apexcharts';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';

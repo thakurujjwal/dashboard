@@ -1,5 +1,4 @@
 import React from 'react';
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import { makeStyles, useMediaQuery, useTheme, Divider, Drawer, Grid, Hidden } from '@material-ui/core';
 
 import MenuList from './MenuList';
@@ -68,9 +67,9 @@ const MainLayout = (props) => {
                 </Grid>
             </Hidden>
             <Divider />
-            <PerfectScrollbar className={classes.ScrollHeight}>
+            <div className={classes.ScrollHeight}>
                 <MenuList />
-            </PerfectScrollbar>
+            </div>
         </React.Fragment>
     );
 

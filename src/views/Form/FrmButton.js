@@ -1,9 +1,6 @@
 import React from 'react';
 import { ButtonGroup,Button, Card, CardHeader, CardContent, Divider, Fab, Grid, IconButton, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 
-import Breadcrumb from '../../component/Breadcrumb';
-// import Button from '../../component/Button';
 import { gridSpacing } from '../../store/constant'
 
 import DeleteIcon from '@mui/icons-material/DeleteForeverOutlined';
@@ -21,17 +18,7 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 const FrmButton = (props) => {
     return (
         <React.Fragment>
-            <Breadcrumb title="Form Button">
-                <Typography component={Link} to="/" variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Home
-                </Typography>
-                <Typography variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Forms
-                </Typography>
-                <Typography variant="subtitle2" color="primary" className="link-breadcrumb">
-                    Buttons
-                </Typography>
-            </Breadcrumb>
+           
             <Grid container spacing={gridSpacing}>
                 <Grid item xs={12} md={6}>
                     <Card>

@@ -1,10 +1,9 @@
 import React from 'react';
 import { makeStyles, Typography, ListItem, ListItemIcon, ListItemText, Collapse, List, Chip, Avatar } from '@material-ui/core';
 
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import NavItem from './../NavItem';
 
 const useStyles = makeStyles((theme) => ({
@@ -108,7 +107,7 @@ const NavCollapse = (props) => {
                         avatar={menu.chip.avatar && <Avatar>{menu.chip.avatar}</Avatar>}
                     />
                 )}
-                {open ? <ExpandLess className={classes.collapseIcon} /> : <ExpandMore className={classes.collapseIcon} />}
+                {open ? <ExpandLessIcon className={classes.collapseIcon} /> : <ExpandMoreIcon className={classes.collapseIcon} />}
             </ListItem>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>

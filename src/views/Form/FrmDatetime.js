@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardHeader, CardContent, Divider, Grid, TextField, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -9,7 +8,6 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 import EventTwoToneIcon from '@mui/icons-material/EventTwoTone';
 
-import Breadcrumb from '../../component/Breadcrumb';
 import { gridSpacing } from '../../store/constant';
 
 const FrmDatetime = (props) => {
@@ -21,17 +19,7 @@ const FrmDatetime = (props) => {
 
     return (
         <React.Fragment>
-            <Breadcrumb title="Form Datetime">
-                <Typography component={Link} to="/" variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Home
-                </Typography>
-                <Typography variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Forms
-                </Typography>
-                <Typography variant="subtitle2" color="primary" className="link-breadcrumb">
-                    Datetime
-                </Typography>
-            </Breadcrumb>
+            
             <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <Grid container spacing={gridSpacing}>
                     <Grid item xs={12} md={6} lg={4}>

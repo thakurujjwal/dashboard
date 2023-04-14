@@ -1,25 +1,20 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
+import LinearProgress from '@mui/material/LinearProgress';
 
-import LinearProgress from '@material-ui/core/LinearProgress';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        width: '100%',
-        '& > * + *': {
-            marginTop: theme.spacing(2),
-        },
-    },
-}));
+const RootDiv = styled('div')({
+  width: '100%',
+  '& > * + *': {
+    marginTop: (theme) => theme.spacing(2),
+  },
+});
 
 const Loader = () => {
-    const classes = useStyles();
-
-    return (
-        <div className={classes.root}>
-            <LinearProgress color="secondary" />
-        </div>
-    );
+  return (
+    <RootDiv>
+      <LinearProgress color="secondary" />
+    </RootDiv>
+  );
 };
 
 export default Loader;

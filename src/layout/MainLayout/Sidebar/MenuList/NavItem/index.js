@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
 
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Chip from '../../../../../component/Chip';
 import * as actionTypes from '../../../../../store/actions';
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Card, CardContent, Paper } from '@material-ui/core';
+import data from './ReportsJsonData/AreawiseProduction.json';
 
 const useStyles = makeStyles({
   table: {
@@ -10,13 +11,6 @@ const useStyles = makeStyles({
 
 const AreawiseProductionReport = () => {
   const classes = useStyles();
-
-  const data = [
-    { area: 'North', productA: 500, productB: 300, productC: 100, productD: 200 },
-    { area: 'South', productA: 400, productB: 450, productC: 150, productD: 300 },
-    { area: 'East', productA: 700, productB: 200, productC: 250, productD: 400 },
-    { area: 'West', productA: 350, productB: 550, productC: 100, productD: 200 }
-  ];
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden', marginBottom: '2rem' }}>

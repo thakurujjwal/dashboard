@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { Card, CardContent } from '@mui/material';
-
+import TripWeighbridge from './ReportsJsonData/TripWeighbridges.json'
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -12,20 +12,11 @@ const useStyles = makeStyles({
 const TirpWeighbridgesReport = () => {
   const classes = useStyles();
 
-  const trips = [
-    { vehicleId: 'ABC123', tripId: '001', date: '2023-03-26', timeIn: '09:15:00', timeOut: '09:30:00', grossWeight: '3000 kg', tareWeight: '2500 kg', netWeight: '500 kg', operator: 'John Doe' },
-    { vehicleId: 'DEF456', tripId: '002', date: '2023-03-26', timeIn: '10:00:00', timeOut: '10:15:00', grossWeight: '4000 kg', tareWeight: '3500 kg', netWeight: '500 kg', operator: 'Jane Smith' },
-    { vehicleId: 'GHI789', tripId: '003', date: '2023-03-27', timeIn: '08:45:00', timeOut: '09:00:00', grossWeight: '2500 kg', tareWeight: '2000 kg', netWeight: '500 kg', operator: 'John Doe' },
-    { vehicleId: 'ABC123', tripId: '001', date: '2023-03-26', timeIn: '09:15:00', timeOut: '09:30:00', grossWeight: '3000 kg', tareWeight: '2500 kg', netWeight: '500 kg', operator: 'John Doe' },
-    { vehicleId: 'DEF456', tripId: '002', date: '2023-03-26', timeIn: '10:00:00', timeOut: '10:15:00', grossWeight: '4000 kg', tareWeight: '3500 kg', netWeight: '500 kg', operator: 'Jane Smith' },
-    { vehicleId: 'GHI789', tripId: '003', date: '2023-03-27', timeIn: '08:45:00', timeOut: '09:00:00', grossWeight: '2500 kg', tareWeight: '2000 kg', netWeight: '500 kg', operator: 'John Doe' }
-  ];
-
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden', marginBottom: '2rem' }}>
       <Card>
         <CardContent>
-          <h1> Tirp Weigh bridges Report</h1>
+          <h1> Trip Weigh bridges Report</h1>
           <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="Trip report table">
               <TableHead>
@@ -42,7 +33,7 @@ const TirpWeighbridgesReport = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {trips.map((trip) => (
+                {TripWeighbridge.map((trip) => (
                   <TableRow key={trip.tripId}>
                     <TableCell>{trip.vehicleId}</TableCell>
                     <TableCell>{trip.tripId}</TableCell>

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Box, Grid, makeStyles, IconButton, Hidden } from '@material-ui/core';
 
-import MenuTwoToneIcon from '@material-ui/icons/MenuTwoTone';
-
+import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 import SearchSection from './SearchSection';
 import Customization from './Customization';
-import ProfileSection from './ProfileSection';
+import ProfileSection from './ProfileSection'
 import NotificationSection from './NotificationSection';
 import logo from './../../../assets/images/dkg_logo.png';
 

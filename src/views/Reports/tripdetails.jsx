@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete'
-import { Card, Grid, CardContent, Button, Box } from '@material-ui/core';
+import { Card, Grid, CardContent, Button, Box } from '@mui/material';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import DownloadIcon from '@mui/icons-material/Download';
-import Map from '../Dashboard/Default/Map';
+import Map from '../Map/Map';
 import BatteryCharging80Icon from '@mui/icons-material/BatteryCharging80';
 import KeyIcon from '@mui/icons-material/Key';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
@@ -19,10 +19,16 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 
 
-
+const locations = [
+  { latitude: 37.7749, longitude: -122.4194, title: "San Francisco" },
+  { latitude: 37.7749, longitude: -122.4313, title: "Golden Gate Park" },
+  { latitude: 37.7883, longitude: -122.4078, title: "Fisherman's Wharf" },
+  { latitude: 37.8010, longitude: -122.4479, title: "Golden Gate Bridge" },
+];
 
 const Tripdetails = () => {
   const [apidata, setApiData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [posts, setPosts] = useState([]);
 
   const columns = [
@@ -97,7 +103,7 @@ const Tripdetails = () => {
                     <Autocomplete
                       id="free-solo-2-demo"
                       disableClearable
-                      options={top100Films.map((option) => option.title)}
+                      options={options.map((option) => option.title)}
                       renderInput={(params) => (
                         <TextField
                           {...params}
@@ -239,40 +245,24 @@ const Tripdetails = () => {
             </Card>
           </Box>
         </Grid>
-        {/* <Grid item xs={8}>
-          <Map />
-                  </Grid> */}
+        <Grid item xs={8}>
+          <Map locations={locations} />
+        </Grid>
       </Grid>
-
-
-
-
     </div >
   )
 }
 
 export default Tripdetails
 
-const top100Films = [
+const options = [
 
-  { title: 'City of God', year: 2002 },
-  { title: 'The Great Dictator', year: 1940 },
-  { title: 'Cinema Paradiso', year: 1988 },
-  { title: 'The Lives of Others', year: 2006 },
-  { title: 'Grave of the Fireflies', year: 1988 },
-  { title: 'Paths of Glory', year: 1957 },
-  { title: 'Django Unchained', year: 2012 },
-  { title: 'The Shining', year: 1980 },
-  { title: 'WALL·E', year: 2008 },
-  { title: 'American Beauty', year: 1999 },
-  { title: 'The Dark Knight Rises', year: 2012 },
-  { title: 'Princess Mononoke', year: 1997 },
-  { title: 'Aliens', year: 1986 },
-  { title: 'Oldboy', year: 2003 },
-  { title: 'Once Upon a Time in America', year: 1984 },
-  { title: 'Witness for the Prosecution', year: 1957 },
-  { title: 'Das Boot', year: 1981 },
-  { title: 'Citizen Kane', year: 1941 },
-  { title: 'North by Northwest', year: 1959 },
-  { title: 'Vertigo', year: 1958 },
+  { title: 'KJ366KDUNGKD45' },
+  { title: 'KJ366KDUNGKD45 ' },
+  { title: 'KJ366KDUNGKD45' },
+  { title: 'KJ366KDUNGKD45' },
+  { title: 'KJ366KDUNGKD45' },
+  { title: 'KJ366KDUNGKD45' },
+  { title: 'KJ366KDUNGKD45' },
+
 ];

@@ -2,10 +2,10 @@ import * as actionTypes from './actions';
 import config from '../config';
 
 export const initialState = {
-    isOpen: 'dashboard', //for active default menu
-    locale: config.i18n,
+    isOpen: 'dashboard',
+
     navType: config.theme,
-    rtlLayout: config.rtlLayout
+  
 };
 
 const customizationReducer = (state = initialState, action) => {
@@ -20,16 +20,8 @@ const customizationReducer = (state = initialState, action) => {
                 ...state,
                 navType: action.navType,
             };
-        case actionTypes.THEME_LOCALE:
-            return {
-                ...state,
-                locale: action.locale,
-            };
-        case actionTypes.THEME_RTL:
-            return {
-                ...state,
-                rtlLayout: action.rtlLayout,
-            };
+     
+      
         default:
             return state;
     }

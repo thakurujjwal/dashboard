@@ -1,13 +1,9 @@
 import React from 'react';
 import { Card, CardHeader, CardContent, Divider, Grid, TextField, Typography, Box } from '@mui/material';
-// import makeStyles from '@mui/styles/makeStyles';
-import { Link } from 'react-router-dom';
 
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import Autocomplete from '@mui/material/Autocomplete';
 
-import Breadcrumb from '../../component/Breadcrumb';
-// import Autocomplete from './../../../component/Autocomplete';
 import { gridSpacing } from '../../store/constant';
 
 const filter = createFilterOptions();
@@ -413,17 +409,7 @@ const FrmAutocomplete = (props) => {
 
     return (
         <React.Fragment>
-            <Breadcrumb title="Autocomplete">
-                <Typography component={Link} to="/" variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Home
-                </Typography>
-                <Typography variant="subtitle2" color="inherit" className="link-breadcrumb">
-                    Forms
-                </Typography>
-                <Typography variant="subtitle2" color="primary" className="link-breadcrumb">
-                    Autocomplete
-                </Typography>
-            </Breadcrumb>
+            
             <Grid container spacing={gridSpacing}>
                 <Grid item xs={12} md={6}>
                     <Grid container spacing={gridSpacing}>

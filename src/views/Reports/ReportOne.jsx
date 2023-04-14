@@ -78,6 +78,7 @@ export default function FlespiTable() {
     } else {
       console.log('asset id empty')
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assest]);
 
 

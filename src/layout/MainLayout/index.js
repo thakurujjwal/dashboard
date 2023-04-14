@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles, useMediaQuery, useTheme, AppBar, CssBaseline, Toolbar } from '@material-ui/core';
 
 import { drawerWidth } from './../../store/constant';
@@ -75,7 +74,8 @@ const MainLayout = ({ children }) => {
                 </Toolbar>
             </AppBar>
             <Sidebar drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
-            <main className={clsx(classes.content, { [classes.contentShift]: drawerOpen })}>
+            <main className={`${classes.content} ${drawerOpen ? classes.contentShift : ''}`}>
+
                 <div className={classes.toolbar} />
                 <div className={classes.main}>{children}</div>
             </main>
